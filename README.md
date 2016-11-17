@@ -21,7 +21,9 @@ ghi chép về Telnet
 
 Telnet (TErminaL NETwork) là một giao thức theo mô hình client-server dùng để kết nối tới các máy tính ở xa dựa trên cơ sở TCP/IP.
 
-Port : 23 
+Giao thức tầng : Application
+
+TCP, Port : 23 
 
 Phiên giao dịch Telnet sử dụng đường truyền không mã hóa (unencrypted). Vì thế, thông tin dễ bị đánh cắp trên đường truyền.
 
