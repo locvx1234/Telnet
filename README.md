@@ -2,16 +2,17 @@
 ghi chép về Telnet 
 
 
-## 0. Mục lục 
-1. [Vài nét về Telnet](#info)
-2. [Cài đặt và cấu hình](#install)
-3. [Bắt gói tin TELNET](#wireshark)
-4. [Tham khảo](#reference)
+## Mục lục 
+
+[1. Vài nét về Telnet](#info)
+[2. Cài đặt và cấu hình](#install)
+[3. Bắt gói tin TELNET](#wireshark)
+[4. Tham khảo](#reference)
 
 <img src="http://i.imgur.com/aH6bCMb.gif">
 
 
-<a href="info">
+<a name="info"></a>
 ### 1. Vài nét về Telnet
 
 Telnet (TErminaL NETwork) là một giao thức theo mô hình client-server dùng để kết nối tới các máy tính ở xa dựa trên cơ sở TCP/IP.
@@ -22,10 +23,11 @@ Phiên giao dịch Telnet sử dụng đường truyền không mã hóa (unencr
 
 <img src="http://i.imgur.com/SaylC05.png">
 
+
 Một giao thức khác an toàn, bảo mật hơn Telnet là [SSH](https://github.com/locvx1234/SSH)
 
 
-<a href="install">
+<a name="install"></a>
 ###2. Cài đặt và cấu hình
 
 ##### Phía Server
@@ -98,7 +100,7 @@ Ví dụ file config iptables như sau :
 	-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 	-A INPUT -p icmp -j ACCEPT
 	-A INPUT -i lo -j ACCEPT
-	*-A INPUT -p tcp -m state --state NEW --dport 23 -j ACCEPT*
+	-A INPUT -p tcp -m state --state NEW --dport 23 -j ACCEPT
 	-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 	-A INPUT -j REJECT --reject-with icmp-host-prohibited
 	-A FORWARD -j REJECT --reject-with icmp-host-prohibited
@@ -120,7 +122,7 @@ Với họ Debian như Ubuntu :
 
 	# sudo apt-get install telnet
 	
-Với Windows, bạn bật dịch vụ telnet client như sau: 
+Với Windows đã cài sẵn telnet, bạn bật dịch vụ telnet client như sau: 
 
 Progams and Features/ Turn Windows features on or off 
 
@@ -131,7 +133,7 @@ Sau đó check vào ô `Telnet Client` và OK
 
 
 
-<a href="wireshark">
+<a name="wireshark"></a>
 ### 3. Bắt gói tin TELNET
 
 Để truy cập vào Telnet server, ở Windows sử dụng Command Line, Linux sử dụng Terminal
@@ -162,7 +164,7 @@ Phân tích dòng TCP: Analyze/Follow/TCP Stream
 Thông tin về username, password và các lệnh thực hiện bị bắt lại dưới dạng clear text. Điều này rất nguy hiểm nếu có một người có khả năng truy cập vào router, switch, gateway ở giữa 2 máy dùng telnet.
 
 
-<a href="reference">
+<a name="reference"></a>
 ### 4. Tham khảo 
 
 https://www.unixmen.com/installing-telnet-centosrhelscientific-linux-6-7/
