@@ -34,9 +34,9 @@ Một giao thức khác an toàn, bảo mật hơn Telnet là [SSH](https://gith
 <a name="install"></a>
 ###2. Cài đặt và cấu hình
 
-##### Phía Server
+#### 2.1 Phía Server
 
-Mình chọn cài đặt Telnet trên Server : CentOS 7
+##### Sử dụng CentOS 7
 
 	# yum install telnet telnet-server -y
 	
@@ -50,7 +50,7 @@ Cho phép Telnet qua Firewall :
 	# firewall-cmd --permanent --add-port=23/tcp
 	# firewall-cmd --reload
 	
-Với CentOS 6 thì phức tạp hơn : 
+##### Sử dụng CentOS 6 thì phức tạp hơn : 
 
 	# yum install telnet telnet-server -y
 	
@@ -114,19 +114,21 @@ Sau đó restart lại `iptables`
 
 	# service iptables restart
 	
-##### Phía Client 
+#### 2.2 Phía Client 
 
 Để telnet từ Client tới Server, trên Client ta phải cài đặt telnet cho client.
 
-Với CentOS và các distro tương đương: 
+##### 2.2.1 Với CentOS và các distro tương đương: 
 
 	# yum install telnet
 	
-Với họ Debian như Ubuntu : 
+##### 2.2.2 Với họ Debian như Ubuntu : 
 
 	# sudo apt-get install telnet
 	
-Với Windows đã cài sẵn telnet, bạn bật dịch vụ telnet client như sau: 
+##### 2.2.3 Với Windows 
+
+Trên Windows cài sẵn telnet, bạn bật dịch vụ telnet client như sau: 
 
 `Progams and Features/ Turn Windows features on or off`
 
