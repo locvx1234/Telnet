@@ -1,3 +1,4 @@
+<a name="#top"></a>
 # Telnet-
 ghi chép về Telnet 
 
@@ -5,8 +6,11 @@ ghi chép về Telnet
 ## Mục lục 
 
 [1. Vài nét về Telnet](#info)
+
 [2. Cài đặt và cấu hình](#install)
+
 [3. Bắt gói tin TELNET](#wireshark)
+
 [4. Tham khảo](#reference)
 
 <img src="http://i.imgur.com/aH6bCMb.gif">
@@ -124,7 +128,7 @@ Với họ Debian như Ubuntu :
 	
 Với Windows đã cài sẵn telnet, bạn bật dịch vụ telnet client như sau: 
 
-Progams and Features/ Turn Windows features on or off 
+`Progams and Features/ Turn Windows features on or off`
 
 Sau đó check vào ô `Telnet Client` và OK
 
@@ -157,7 +161,7 @@ Một gói tin Telnet :
 
 <img src="http://i.imgur.com/crpmAKk.png">
 
-Phân tích dòng TCP: Analyze/Follow/TCP Stream 
+Phân tích dòng TCP: `Analyze/Follow/TCP Stream`
 
 <img src="http://i.imgur.com/ZWHqipm.png">
 
@@ -168,3 +172,6 @@ Thông tin về username, password và các lệnh thực hiện bị bắt lạ
 ### 4. Tham khảo 
 
 https://www.unixmen.com/installing-telnet-centosrhelscientific-linux-6-7/
+
+
+[HEAD](top)
